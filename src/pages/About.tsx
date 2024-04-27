@@ -5,7 +5,7 @@ const About = () => {
         <span className="border-b-2 border-blueZodiac text-xl font-bold text-blueZodiac md:text-2xl lg:text-3xl">
           About Me
         </span>
-        <div className="mt-10 flex flex-col items-center justify-center gap-9 md:flex md:flex-row lg:flex lg:flex-row ">
+        <div className="mt-10 flex flex-col items-center justify-center gap-9 md:flex md:flex-row lg:flex lg:flex-row">
           <img src="/public/photo.jpg" alt="" className="w-52" />
           <div>
             <h2 className="text-sm md:text-base">
