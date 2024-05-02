@@ -6,9 +6,9 @@ type Props = {
 
 const CardService = ({ title, detail, src }: Props) => {
   return (
-    <div className="flex flex-row gap-8">
+    <figure className="flex flex-col justify-center gap-2">
       <img src={src} alt="" className="w-16 md:w-20 lg:w-24" />
-      <div>
+      <figcaption className="flex flex-col justify-center gap-2">
         <h1 className="md:text-md text-base font-semibold lg:text-lg">
           {title}
         </h1>
@@ -16,8 +16,8 @@ const CardService = ({ title, detail, src }: Props) => {
           {detail}
           <br />
         </p>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   );
 };
 

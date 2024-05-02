@@ -4,9 +4,6 @@
 
 @layer base {
   html {
-    font-family: "Poppins", sans-serif;
-  }
-  section {
-    @apply w-full p-4 md:p-8 lg:py-24;
+    font-family: "Roboto", sans-serif;
   }
 }

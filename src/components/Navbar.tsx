@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-blueZodiac px-4 py-2 md:py-2">
+    <nav className="w-full bg-neutral-800 px-4 py-2 md:py-2">
       <div className="m-auto flex items-center justify-between lg:max-w-5xl">
         {/* logo */}
         <a href="#">
@@ -22,7 +22,7 @@ const Navbar = () => {
             <li key={item} className="group cursor-pointer">
               <a
                 href="#"
-                className="text-tiara focus:text-fountainBlue group-hover:text-fountainBlue"
+                className="text-neutral-400 focus:text-neutral-200 group-hover:text-neutral-200"
               >
                 {item}
               </a>

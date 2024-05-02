@@ -39,31 +39,31 @@ const Portfolio = () => {
   return (
     <section className="w-full p-4 md:p-8 lg:py-24">
       <div className="m-auto lg:max-w-5xl">
-        <span className="border-b-2 border-blueZodiac text-xl font-bold text-blueZodiac md:text-2xl lg:text-3xl">
-          Portfolio
+        <span className="border-blueZodiac text-blueZodiac border-b-[1px] px-4 py-2 text-xl font-bold md:text-2xl lg:text-3xl">
+          MyProjects
         </span>
         <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <div className="flex gap-1">
             <button
-              className="border-2 border-blueZodiac px-6 py-3 text-sm hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara md:text-base"
+              className="border-blueZodiac hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara border-2 px-6 py-3 text-sm md:text-base"
               onClick={() => setFilter(Projects)}
             >
               All
             </button>
             <button
-              className="border-2 border-blueZodiac px-6 py-3 text-sm hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara md:text-base"
+              className="border-blueZodiac hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara border-2 px-6 py-3 text-sm md:text-base"
               onClick={() => filterItems("Data Analysis")}
             >
               Data Analysis
             </button>
             <button
-              className="border-2 border-blueZodiac px-6 py-3 text-sm hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara md:text-base"
+              className="border-blueZodiac hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara border-2 px-6 py-3 text-sm md:text-base"
               onClick={() => filterItems("Machine Learning")}
             >
               Machine Learning
             </button>
             <button
-              className="border-2 border-blueZodiac px-6 py-3 text-sm hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara md:text-base"
+              className="border-blueZodiac hover:bg-blueZodiac hover:text-tiara focus:bg-blueZodiac focus:text-tiara border-2 px-6 py-3 text-sm md:text-base"
               onClick={() => filterItems("Web Development")}
             >
               Web Development

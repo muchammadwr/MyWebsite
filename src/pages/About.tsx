@@ -2,11 +2,11 @@ const About = () => {
   return (
     <section className="w-full p-4 md:p-8 lg:py-24">
       <div className="m-auto lg:max-w-5xl">
-        <span className="border-b-2 border-blueZodiac text-xl font-bold text-blueZodiac md:text-2xl lg:text-3xl">
+        <span className="border-blueZodiac text-blueZodiac border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
           About Me
         </span>
         <div className="mt-10 flex flex-col items-center justify-center gap-9 md:flex md:flex-row lg:flex lg:flex-row">
-          <img src="/public/photo.jpg" alt="" className="w-52" />
+          <img src="/public/photo.jpg" alt="" className="w-52 rounded-lg" />
           <div>
             <h2 className="text-sm md:text-base">
               Hi, I'm Muchammad Wildan 🖐️
@@ -34,7 +34,7 @@ const About = () => {
               reading books, especially those on self-improvement.
             </p>
             <br />
-            <button className="border-2 border-blueZodiac px-6 py-3 text-sm hover:bg-blueZodiac hover:text-tiara md:text-base">
+            <button className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm hover:bg-slate-800 hover:text-neutral-200 focus:bg-slate-800 focus:text-neutral-200 md:text-base">
               My Resume
             </button>
           </div>
