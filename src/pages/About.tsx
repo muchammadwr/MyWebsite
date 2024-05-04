@@ -1,6 +1,6 @@
-const About = () => {
+const About = ({ id }: { id: string }) => {
   return (
-    <section className="w-full p-4 md:p-8 lg:py-24">
+    <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
       <div className="m-auto lg:max-w-5xl">
         <span className="border-blueZodiac text-blueZodiac border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
           About Me
@@ -13,11 +13,11 @@ const About = () => {
             </h2>
             <br />
             <p className="text-sm md:text-base">
-              A Data Scientist and Software Engineer. My job involves
-              processing, analyzing, and building models using machine learning
-              with data to achieve better decision-making based on data. In
-              addition to data science, I also possess the ability to develop
-              website applications.
+              A Data Scientist with background Software Engineer. My job
+              involves processing, analyzing, and building models using machine
+              learning with data to achieve better decision-making based on
+              data. In addition to data science, I also possess the ability to
+              develop website applications.
             </p>
             <br />
             <p className="text-sm md:text-base">
@@ -34,7 +34,7 @@ const About = () => {
               reading books, especially those on self-improvement.
             </p>
             <br />
-            <button className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm hover:bg-slate-800 hover:text-neutral-200 focus:bg-slate-800 focus:text-neutral-200 md:text-base">
+            <button className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base">
               My Resume
             </button>
           </div>

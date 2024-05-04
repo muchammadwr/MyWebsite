@@ -4,18 +4,15 @@ const ServicesMenu = [
   {
     title: "Data Analysis",
     detail:
-      "I am proficient in data analysis, capable of deriving insights for a company starting from data cleaning, preprocessing, exploratory data analysis, and generating insights, reports, dashboard and visual graphs.",
+      "Experience data-driven excellence with our tailored solutions for analysts.",
     src: "/src/assets/chart.svg",
   },
   {
     title: "Machine Learning",
     detail:
-      "I develop machine learning models using Python to conduct predictive analysis on the data. My expertise includes implementing supervised and unsupervised algorithms.",
+      "I develop machine learning models using Python to conduct predictive analysis on the data.",
     src: "/src/assets/brain.svg",
   },
-];
-
-const CardService = [
   {
     title: "Frontend",
     detail:
@@ -30,34 +27,22 @@ const CardService = [
   },
 ];
 
-const Services = () => {
+const Services = ({ id }: { id: string }) => {
   return (
-    <section className="w-full p-4 md:p-8 lg:py-24">
+    <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
       <div className="m-auto lg:max-w-5xl">
         <span className="border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
           I will do ...
         </span>
-        <div className="mt-10 grid grid-cols-1  items-center justify-center gap-6 ">
-          <div>
-            {ServicesMenu.map((item) => (
-              <Card
-                key={item.title}
-                title={item.title}
-                detail={item.detail}
-                src={item.src}
-              />
-            ))}
-          </div>
-          <div>
-            {CardService.map((item) => (
-              <Card
-                key={item.title}
-                title={item.title}
-                detail={item.detail}
-                src={item.src}
-              />
-            ))}
-          </div>
+        <div className="gap mt-10 grid grid-cols-1 place-items-center gap-6 p-4 md:grid-cols-2 ">
+          {ServicesMenu.map((item) => (
+            <Card
+              key={item.title}
+              title={item.title}
+              detail={item.detail}
+              src={item.src}
+            />
+          ))}
         </div>
       </div>
     </section>

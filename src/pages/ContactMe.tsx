@@ -1,8 +1,8 @@
-const ContactMe = () => {
+const ContactMe = ({ id }: { id: string }) => {
   return (
-    <section className="w-full p-4 md:p-8 lg:py-24">
+    <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
       <div className="m-auto lg:max-w-5xl">
-        <span className="border-b-2 border-blueZodiac text-xl font-bold text-blueZodiac md:text-2xl lg:text-3xl">
+        <span className="border-blueZodiac text-blueZodiac border-b-2 text-xl font-bold md:text-2xl lg:text-3xl">
           Contact Me
         </span>
         <div className="mt-10 flex flex-col items-center justify-center gap-4">
@@ -12,7 +12,7 @@ const ContactMe = () => {
             className="flex w-1/2 flex-col items-center justify-center gap-4"
           >
             <input
-              className="h-10 w-full border-2 border-blueZodiac p-4 text-sm text-blueZodiac placeholder:text-tiara focus:border-none focus:ring-4 focus:ring-blueZodiac"
+              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac h-10 w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
               type="text"
               name="name"
               id="name"
@@ -20,7 +20,7 @@ const ContactMe = () => {
               required
             />
             <input
-              className="h-10 w-full border-2 border-blueZodiac p-4 text-sm text-blueZodiac placeholder:text-tiara focus:border-none focus:ring-4 focus:ring-blueZodiac"
+              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac h-10 w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
               type="email"
               name="email"
               id="email"
@@ -28,7 +28,7 @@ const ContactMe = () => {
               required
             />
             <textarea
-              className="w-full border-2 border-blueZodiac p-4 text-sm text-blueZodiac placeholder:text-tiara focus:border-none focus:ring-4 focus:ring-blueZodiac"
+              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
               name="message"
               id=""
               cols={10}
@@ -39,7 +39,6 @@ const ContactMe = () => {
           </form>
         </div>
       </div>
-      
     </section>
   );
 };

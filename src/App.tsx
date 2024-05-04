@@ -10,24 +10,24 @@ import Services from "./pages/Services";
 export default function App() {
   return (
     <main>
-      <Navbar />
-      <Home />
-      <About />
+      <Navbar style="sticky top-0 z-50" />
+      <Home id="home" />
+      <About id="about" />
       <Bg
         background="bg-[url('/public/bgglasses.jpg')]"
         title="The sexiest job in the 21st century"
       />
-      <Services />
+      <Services id="services" />
       <Bg
         background="bg-[url('/public/bglearning.jpg')]"
         title="Never stop learning and implementing"
       />
-      <Portfolio />
+      <Portfolio id="portfolio" />
       <Bg
         background="bg-[url('/public/bgroad.jpg')]"
         title="The best way out is always through."
       />
-      <ContactMe />
+      <ContactMe id="contact" />
       <Footer />
     </main>
   );
