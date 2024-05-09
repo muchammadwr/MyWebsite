@@ -1,4 +1,4 @@
-const ContactMe = ({ id }: { id: string }) => {
+const ContactMe = ({ id }: { id?: string }) => {
   return (
     <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
       <div className="m-auto lg:max-w-5xl">

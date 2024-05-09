@@ -1,7 +1,18 @@
-const Bg = ({ title, background }: { title: string; background: string }) => {
+const Bg = ({
+  title,
+  background,
+  id,
+  height,
+}: {
+  title: string;
+  background: string;
+  id: string;
+  height: string;
+}) => {
   return (
     <section
-      className={`relative flex h-screen w-full flex-col items-center justify-center bg-black ${background} bg-cover bg-fixed bg-center bg-no-repeat p-4`}
+      className={`relative flex ${height} w-full flex-col items-center justify-center bg-black ${background} bg-cover bg-fixed bg-center bg-no-repeat p-4`}
+      id={id}
     >
       <div className="absolute h-full w-full bg-neutral-950 bg-opacity-85"></div>
       <div className="flex flex-col gap-4">

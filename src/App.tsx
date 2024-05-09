@@ -14,20 +14,26 @@ export default function App() {
       <Home id="home" />
       <About id="about" />
       <Bg
+        id="services"
+        height="h-[50vh]"
         background="bg-[url('/public/bgglasses.jpg')]"
         title="The sexiest job in the 21st century"
       />
-      <Services id="services" />
+      <Services />
       <Bg
+        height="h-[50vh]"
+        id="portfolio"
         background="bg-[url('/public/bglearning.jpg')]"
         title="Never stop learning and implementing"
       />
-      <Portfolio id="portfolio" />
+      <Portfolio />
       <Bg
+        height="h-[50vh]"
+        id="contact"
         background="bg-[url('/public/bgroad.jpg')]"
         title="The best way out is always through."
       />
-      <ContactMe id="contact" />
+      <ContactMe />
       <Footer />
     </main>
   );

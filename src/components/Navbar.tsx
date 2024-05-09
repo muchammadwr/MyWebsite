@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { faBarsStaggered, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 
 const menu = [
   {
@@ -8,7 +8,7 @@ const menu = [
     href: "#home",
   },
   {
-    page: "About Me",
+    page: "About",
     href: "#about",
   },
   {
@@ -16,24 +16,44 @@ const menu = [
     href: "#services",
   },
   {
-    page: "My Portfolio",
+    page: "Portfolio",
     href: "#portfolio",
   },
   {
-    page: "Contact Me",
+    page: "Contact",
     href: "#contact",
   },
 ];
 
 const Navbar = ({ style }: { style: string }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className={`w-full ${style} bg-neutral-800 px-4 py-2 md:py-2`}>
+    <nav
+      className={`active ${show && "hidden"} w-full ${style} bg-neutral-800 px-4 py-2 md:py-2`}
+    >
       <div className="m-auto flex items-center justify-between lg:max-w-5xl">
         {/* logo */}
         <a href="#home">
@@ -44,7 +64,7 @@ const Navbar = ({ style }: { style: string }) => {
             <li key={index} className="group cursor-pointer">
               <a
                 href={item.href}
-                className="text-neutral-400 focus:text-neutral-200 group-hover:text-neutral-200"
+                className="text-neutral-400 group-hover:text-neutral-200 group-focus:text-neutral-200"
               >
                 {item.page}
               </a>

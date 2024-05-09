@@ -1,13 +1,41 @@
+import { motion } from "framer-motion";
+
+const RevealX = (x: number) => ({
+  hidden: { opacity: 0, x: x },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 0.8,
+      delay: 0.8,
+    },
+  },
+});
+
 const About = ({ id }: { id: string }) => {
   return (
     <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
       <div className="m-auto lg:max-w-5xl">
-        <span className="border-blueZodiac text-blueZodiac border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
-          About Me
-        </span>
+        <motion.div variants={RevealX(-100)} initial="hidden" animate="visible">
+          <span className="border-blueZodiac text-blueZodiac border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
+            Who are you?...
+          </span>
+        </motion.div>
         <div className="mt-10 flex flex-col items-center justify-center gap-9 md:flex md:flex-row lg:flex lg:flex-row">
-          <img src="/public/photo.jpg" alt="" className="w-52 rounded-lg" />
-          <div>
+          <motion.img
+            variants={RevealX(-100)}
+            initial="hidden"
+            animate="visible"
+            src="/public/photo.jpg"
+            alt=""
+            className="w-52 rounded-lg"
+          />
+          <motion.div
+            variants={RevealX(100)}
+            initial="hidden"
+            animate="visible"
+          >
             <h2 className="text-sm md:text-base">
               Hi, I'm Muchammad Wildan 🖐️
             </h2>
@@ -37,7 +65,7 @@ const About = ({ id }: { id: string }) => {
             <button className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base">
               My Resume
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Card from "../components/CardService";
+import { motion } from "framer-motion";
 
 const ServicesMenu = [
   {
@@ -27,13 +28,27 @@ const ServicesMenu = [
   },
 ];
 
-const Services = ({ id }: { id: string }) => {
+const container = (delay: number, x: number) => ({
+  hidden: { x: x, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { ease: "easeOut", duration: 0.8, delay: delay },
+  },
+});
+
+const Services = () => {
   return (
-    <section className="w-full p-4 md:p-8 lg:py-24" id={id}>
+    <section className="w-full p-4 md:p-8 lg:py-24">
       <div className="m-auto lg:max-w-5xl">
-        <span className="border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl">
+        <motion.span
+          variants={container(2, -100)}
+          initial="hidden"
+          animate="visible"
+          className="border-b-[1px] text-xl font-bold md:text-2xl lg:text-3xl"
+        >
           I will do ...
-        </span>
+        </motion.span>
         <div className="gap mt-10 grid grid-cols-1 place-items-center gap-6 p-4 md:grid-cols-2 ">
           {ServicesMenu.map((item) => (
             <Card

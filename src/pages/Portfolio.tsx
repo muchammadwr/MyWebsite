@@ -1,6 +1,8 @@
 import { useState } from "react";
 import CardPortfolio from "../components/CardPortfolio";
 
+
+
 const Projects = [
   {
     title: "Dashboard",
@@ -28,7 +30,7 @@ const Projects = [
   },
 ];
 
-const Portfolio = ({ id }: { id: string }) => {
+const Portfolio = ({ id }: { id?: string }) => {
   const [filter, setFilter] = useState(Projects);
 
   const filterItems = (category: string) => {
@@ -45,25 +47,25 @@ const Portfolio = ({ id }: { id: string }) => {
         <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <div className="flex gap-1">
             <button
-              className="border-2 px-6 py-3 text-sm hover:bg-neutral-800 hover:text-neutral-200 focus:bg-neutral-800 focus:text-neutral-200 md:text-base"
+              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
               onClick={() => setFilter(Projects)}
             >
               All
             </button>
             <button
-              className="border-2 px-6 py-3 text-sm hover:bg-neutral-800 hover:text-neutral-200 focus:bg-neutral-800 focus:text-neutral-200 md:text-base"
+              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
               onClick={() => filterItems("Data Analysis")}
             >
               Data Analysis
             </button>
             <button
-              className="border-2 px-6 py-3 text-sm hover:bg-neutral-800 hover:text-neutral-200 focus:bg-neutral-800 focus:text-neutral-200 md:text-base"
+              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
               onClick={() => filterItems("Machine Learning")}
             >
               Machine Learning
             </button>
             <button
-              className="border-2 px-6 py-3 text-sm hover:bg-neutral-800 hover:text-neutral-200 focus:bg-neutral-800 focus:text-neutral-200 md:text-base"
+              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
               onClick={() => filterItems("Web Development")}
             >
               Web Development
