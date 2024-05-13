@@ -1,39 +1,27 @@
-import { motion } from "framer-motion";
-
 type Props = {
   title: string;
   detail: string;
-  img: string;
+  src: string;
 };
 
-const container = (delay: number, y: number) => ({
-  hidden: { y: y, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { ease: "easeOut", duration: 0.8, delay: delay },
-  },
-});
-
-const CardPortfolio = ({ title, detail, img }: Props) => {
+const CardPortfolio = ({ title, detail, src }: Props) => {
   return (
-    <motion.figure
-      variants={container(0.8, 100)}
-      initial="hidden"
-      animate="visible"
-      className="group aspect-[4/3] cursor-pointer"
-    >
-      <div className="relative h-full overflow-hidden">
-        <img className="w-full object-cover" src={img} alt="" />
-        <figcaption className="absolute flex h-full w-full flex-col items-center justify-center gap-4 bg-neutral-800/80 opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100">
-          <h1 className="text-center text-xl font-bold text-neutral-200">
-            {title}
-          </h1>
-          <hr className="w-1/2" />
-          <p className="text-center text-sm text-neutral-200">{detail}</p>
-        </figcaption>
+    <div className="card card-compact w-72 bg-base-100 shadow-xl">
+      <figure>
+        <img
+          src={src}
+          alt={title}
+          className="h-56 bg-cover bg-center object-cover"
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
+        <p>{detail}</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary btn-sm">See More!</button>
+        </div>
       </div>
-    </motion.figure>
+    </div>
   );
 };
 

@@ -45,7 +45,7 @@ const Navbar = ({ style }: { style: string }) => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY, controlNavbar]);
+  }, [lastScrollY]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

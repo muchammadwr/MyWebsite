@@ -62,7 +62,7 @@ const About = ({ id }: { id: string }) => {
               reading books, especially those on self-improvement.
             </p>
             <br />
-            <button className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base">
+            <button className="btn btn-outline focus:btn focus:btn-neutral">
               My Resume
             </button>
           </motion.div>

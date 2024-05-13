@@ -1,8 +1,6 @@
 import { useState } from "react";
 import CardPortfolio from "../components/CardPortfolio";
 
-
-
 const Projects = [
   {
     title: "Dashboard",
@@ -47,36 +45,36 @@ const Portfolio = ({ id }: { id?: string }) => {
         <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <div className="flex gap-1">
             <button
-              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
+              className="btn btn-outline focus:btn focus:btn-neutral"
               onClick={() => setFilter(Projects)}
             >
               All
             </button>
             <button
-              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
+              className="btn btn-outline focus:btn focus:btn-neutral"
               onClick={() => filterItems("Data Analysis")}
             >
               Data Analysis
             </button>
             <button
-              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
+              className="btn btn-outline focus:btn focus:btn-neutral"
               onClick={() => filterItems("Machine Learning")}
             >
               Machine Learning
             </button>
             <button
-              className="rounded-lg border-2 border-neutral-800 px-6 py-3 text-sm transition duration-150 ease-out hover:bg-slate-800 hover:text-neutral-200 hover:ease-in focus:bg-slate-800 focus:text-neutral-200 md:text-base"
+              className="btn btn-outline focus:btn focus:btn-neutral"
               onClick={() => filterItems("Web Development")}
             >
-              Web Development
+              Development
             </button>
           </div>
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {filter.map((item) => (
               <CardPortfolio
                 key={item.title}
                 detail={item.detail}
-                img={item.img}
+                src={item.img}
                 title={item.title}
               />
             ))}

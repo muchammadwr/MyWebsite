@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-const RevealX = (x: number) => ({
-  hidden: { opacity: 0, x: x },
+const RevealY = (y: number) => ({
+  hidden: { opacity: 0, y: y },
   visible: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       ease: "easeOut",
       duration: 0.8,
@@ -22,7 +22,7 @@ const Home = ({ id }: { id: string }) => {
       <div className="absolute h-full w-full bg-neutral-950 bg-opacity-85"></div>
       <div className="flex flex-col gap-4">
         <motion.h2
-          variants={RevealX(100)}
+          variants={RevealY(-100)}
           initial="hidden"
           animate="visible"
           className="z-10 text-4xl font-bold text-neutral-200 md:text-5xl lg:text-6xl"
@@ -30,7 +30,7 @@ const Home = ({ id }: { id: string }) => {
           MUCHAMMAD WILDAN ALKAUTSAR
         </motion.h2>
         <motion.p
-          variants={RevealX(-100)} //
+          variants={RevealY(100)} //
           initial="hidden"
           animate="visible"
           className="z-10 text-base text-neutral-200 md:text-lg"

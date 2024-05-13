@@ -12,7 +12,7 @@ const ContactMe = ({ id }: { id?: string }) => {
             className="flex w-1/2 flex-col items-center justify-center gap-4"
           >
             <input
-              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac h-10 w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
+              className="input input-bordered w-full max-w-sm"
               type="text"
               name="name"
               id="name"
@@ -20,7 +20,7 @@ const ContactMe = ({ id }: { id?: string }) => {
               required
             />
             <input
-              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac h-10 w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
+              className="input input-bordered w-full max-w-sm"
               type="email"
               name="email"
               id="email"
@@ -28,14 +28,16 @@ const ContactMe = ({ id }: { id?: string }) => {
               required
             />
             <textarea
-              className="border-blueZodiac text-blueZodiac placeholder:text-tiara focus:ring-blueZodiac w-full border-2 p-4 text-sm focus:border-none focus:ring-4"
+              className="textarea textarea-bordered w-full max-w-sm"
               name="message"
               id=""
               cols={10}
               rows={3}
               placeholder="Message"
             ></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" className="btn btn-neutral w-full max-w-sm">
+              Send
+            </button>
           </form>
         </div>
       </div>

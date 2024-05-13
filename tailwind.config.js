@@ -1,3 +1,5 @@
+import daisyui from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -7,6 +9,9 @@ export default {
         robotto: ["Roboto", "sans-serif"],
       },
     },
+    daisyui: {
+      themes: ["light", "dark"],
+    },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
